@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Inter', -apple-system, sans-serif;
+  background: #ffffff;
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* ===================== ERROR ===================== */
+.error {
+  background: #ffffff;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* ===================== FORM ===================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===================== INPUT GROUP ===================== */
+.input-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+}
+
+/* ===================== PASSWORD ===================== */
+.password-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.password-container input {
+  border: none;
+  flex: 1;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* ===================== LOGIN BUTTON ===================== */
+.login-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===================== LINKS ===================== */
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Forgot Password */
+.links a:first-child {
+  color: #2563eb;
+}
+
+/* Back to Home */
+.links a:last-child {
+  color: #16a34a;
+}
+
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 25px 20px;
+  }
+
+  .logo h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-btn {
+    font-size: 0.95rem;
+  }
+}
