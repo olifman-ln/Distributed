@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  padding: 20px;
+  color: #333;
+}
+
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 i {
+  color: #27ae60;
+}
+
+.table-wrapper {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background: #2c3e50;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f2f8ff;
+}
+
+
+td:nth-child(7) {
+  font-weight: bold;
+}
+
+td:nth-child(7):contains('Paid') {
+  color: #27ae60;
+}
+
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a[href*='mark_paid'] {
+  color: #27ae60;
+}
+
+a[href*='mark_paid']:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  table {
+    min-width: unset;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
