@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+h1 {
+  color: #1e293b;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+h1 i {
+  color: #f59e0b;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background: #1e293b;
+  color: white;
+}
+
+th {
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Status Badges */
+.status-pending,
+.status-unpaid,
+.status-confirmed {
+  color: #92400e;
+  background: #fef3c7;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #fcd34d;
+}
+
+.status-paid {
+  color: #065f46;
+  background: #d1fae5;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #a7f3d0;
+}
+
+.status-overdue {
+  color: #991b1b;
+  background: #fee2e2;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #fecaca;
+}
+
+
+.pay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #10b981;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2);
+}
+
+.pay-btn i {
+  font-size: 1rem;
+}
+
+.card>p {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  padding: 40px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    padding: 14px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 0 -15px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .pay-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 15px 10px;
+  }
+
+  th,
+  td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+
+  .status-pending,
+  .status-paid,
+  .status-overdue {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .pay-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+tbody tr:nth-child(even):hover {
+  background: #f1f5f9;
+}
